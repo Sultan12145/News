@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            height: 100%;
+            width: 250px;
+            top: 0;
+            right: -250px;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            z-index: 1;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .menu-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            font-size: 24px;
+            color: #fff;
+            z-index: 2;
+        }
+
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        
+        @media only screen and (max-width: 768px) {
+            nav {
+                width: 100%;
+                right: -100%;
+            }
+
+            section {
+                margin-right: 0;
+            }
+
+            article {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Новости</h1>
+    </header>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav id="side-menu">
+        <a href="home.html">Домой</a>
+        <a href="politics.html">Политика</a>
+        <a href="tech.html">Технологии</a>
+        <a href="sci.html">Наука</a>
+        <a href="ent.html">Развлечения</a>
+        <a href="about.html">О нас</a>
+    </nav>
+<main>
+    <h1></h1>
+    <p>
+</main>
+    <footer>
+        <p>&copy; 2024 Сарапулов Султан</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            var sideMenu = document.getElementById('side-menu');
+            sideMenu.style.right = (sideMenu.style.right === "0px") ? "-250px" : "0px";
+        }
+    </script>
+</body>
+</html>
